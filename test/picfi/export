@@ -1,0 +1,2108 @@
+[
+  {
+    "name": "408003",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6504448,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "4080a6",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "4080f9",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4284551168,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "408151",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4077223936,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4284551168,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "408f87",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4076957696,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4284551168,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "408fe2",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4076957696,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "40903a",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4076957696,
+        "end": 4077223936,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "409080",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "4092eb",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6561792,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "4149b8",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6627328,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143a8",
+      "0x143b0",
+      "0x143b8",
+      "0x143c0",
+      "0x14458",
+      "0x145b0",
+      "0x145b8",
+      "0x145c0",
+      "0x408650"
+    ]
+  },
+  {
+    "name": "40b37a",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6627328,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4284551168,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "40b478",
+    "skipped": false,
+    "segments": [
+      {
+        "start": 4194304,
+        "end": 4313088,
+        "perm": "rwxs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6406144,
+        "end": 6410240,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 6410240,
+        "end": 6414336,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 6414336,
+        "end": 6627328,
+        "perm": "rwxp",
+        "desc": "Heap"
+      },
+      {
+        "start": 4079226880,
+        "end": 4283711488,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4283711488,
+        "end": 4284461056,
+        "perm": "--xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286554112,
+        "end": 4286558208,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4286558208,
+        "end": 4286562304,
+        "perm": "r-xs",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 4286562304,
+        "end": 4294967296,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 4294967296,
+        "end": 8589934592,
+        "perm": "---p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140731983224832,
+        "end": 140736278192128,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140736278192128,
+        "end": 140737351933952,
+        "perm": "rwxp",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737351933952,
+        "end": 140737352036352,
+        "perm": "r-xp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737352048640,
+        "end": 140737352798208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353699328,
+        "end": 140737353703424,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737353703424,
+        "end": 140737353822208,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354047488,
+        "end": 140737354051584,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354051584,
+        "end": 140737354055680,
+        "perm": "-w-s",
+        "desc": "Path(\"/dev/shm/mcfi (deleted)\")"
+      },
+      {
+        "start": 140737354055680,
+        "end": 140737354113024,
+        "perm": "-w-p",
+        "desc": "Anonymous"
+      },
+      {
+        "start": 140737354113024,
+        "end": 140737354125312,
+        "perm": "r--p",
+        "desc": "Vvar"
+      },
+      {
+        "start": 140737354125312,
+        "end": 140737354129408,
+        "perm": "r-xp",
+        "desc": "Vdso"
+      },
+      {
+        "start": 140737354129408,
+        "end": 140737354133504,
+        "perm": "rwxp",
+        "desc": "Path(\"/home/hugh/tmp/cfifuzz/test/picfi/rock\")"
+      },
+      {
+        "start": 140737488211968,
+        "end": 140737488351232,
+        "perm": "rwxp",
+        "desc": "Stack"
+      },
+      {
+        "start": 18446744073699065856,
+        "end": 18446744073699069952,
+        "perm": "--xp",
+        "desc": "Vsyscall"
+      }
+    ],
+    "targets": [
+      "0x143c8",
+      "0x143d0",
+      "0x143d8",
+      "0x143e0",
+      "0x14430",
+      "0x14438",
+      "0x14440",
+      "0x14448",
+      "0x14488",
+      "0x14490",
+      "0x14498",
+      "0x144a0",
+      "0x4086e0"
+    ]
+  },
+  {
+    "name": "408003",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4080a6",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4080f9",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408151",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408f87",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408fe2",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40903a",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "409080",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4092eb",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4149b8",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40b37a",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40b478",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408003",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4080a6",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4080f9",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408151",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408f87",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "408fe2",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40903a",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "409080",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4092eb",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "4149b8",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40b37a",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  },
+  {
+    "name": "40b478",
+    "skipped": true,
+    "segments": [],
+    "targets": []
+  }
+]
