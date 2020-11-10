@@ -117,7 +117,7 @@ impl Debugger {
     pub fn let_it_go(&self) {
         self.process.main_thread().trace_set_options(0).unwrap();
         self.process.send_signal(Signal::SIGSTOP).unwrap();
-        panic!("let it go!");
+        panic!("let it go! use `gdb -p {}` to debug the child", self.process.pid())
     }
 
     pub fn syscall(

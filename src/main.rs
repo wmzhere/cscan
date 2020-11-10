@@ -1,36 +1,18 @@
 mod binary;
 mod debugger;
 mod disasm;
-mod tester;
+mod export;
+mod verifier;
+mod range_set;
 
 use debugger::Debugger;
-use humansize::{file_size_opts::BINARY, FileSize};
+use dfuzz_os::process::*;
 use log::*;
-use serde::Serialize;
-use std::collections::{BTreeSet, HashSet};
+use std::collections::HashSet;
 use std::ffi::OsString;
 use std::fmt::Debug;
-use std::fs::File;
-use std::ops::Range;
-use std::time::Instant;
 use structopt::StructOpt;
-use tester::*;
-
-#[derive(Debug, Default, Serialize)]
-struct IctTestResult {
-    name: String,
-    skipped: bool,
-    segments: Vec<Segment>,
-    targets: BTreeSet<String>,
-}
-
-#[derive(Debug, Serialize)]
-struct Segment {
-    start: u64,
-    end: u64,
-    perm: String,
-    desc: String,
-}
+use verifier::CfiVerifier;
 
 #[derive(Debug, StructOpt)]
 struct Opt {
@@ -39,8 +21,8 @@ struct Opt {
     start: u64,
 
     /// The index for ICT where fuzzing ends. ICTs equal or greater are ignored.
-    #[structopt(long)]
-    end: Option<u64>,
+    #[structopt(long, default_value = "18446744073709551615")]
+    end: u64,
 
     /// The file name to export.
     #[structopt(long, name = "filename")]
@@ -53,138 +35,121 @@ struct Opt {
     /// Arguments to run the target program.
     #[structopt(parse(from_os_str), set(structopt::clap::ArgSettings::Last))]
     args: Vec<OsString>,
+
+    /// Make the ICT oneshot, i.e. remove its breakpoint after testing.
+    /// Accelerates the testing at the cost of losing contextual information and
+    /// incorrect ICT numbering.
+    #[structopt(long)]
+    oneshot: bool,
+
+    /// Skip testing the ICTs.
+    #[structopt(long)]
+    ignore: Vec<u64>,
 }
 
-fn cfifuzz(tester: &mut dyn CfiTester, range: Range<u64>) -> Vec<IctTestResult> {
-    let mut icts = vec![];
-    let mut tested = HashSet::<String>::default();
-    while let Some((name, ranges)) = tester.advance_ict() {
-        // Insert a new entry into result.
-        let ict = IctTestResult {
-            name,
-            skipped: true,
-            targets: Default::default(),
-            segments: vec![],
+fn run(
+    mut dbg: Debugger,
+    mut verifier: Box<dyn CfiVerifier>,
+    icts: &mut export::IctCollection,
+    opt: &Opt,
+) {
+    let mut tested_icts = HashSet::<String>::default();
+    let ignore: HashSet<_> = opt.ignore.iter().collect();
+    loop {
+        let regs = match dbg.next_event() {
+            Ok(regs) => regs,
+            Err(event) => {
+                if let EventKind::Terminated(TerminateReason::Exit { status: 0 }) = event {
+                    info!("normal exit (status = 0)");
+                } else {
+                    warn!("abnormal exit: {:?}", event);
+                    dbg.let_it_go();
+                }
+                break;
+            }
         };
-        icts.push(ict);
-        let ict_index = icts.len() - 1;
-        let ict = &mut icts[ict_index];
-        let ict_index = ict_index as u64;
-        let is_tested = !tested.insert(ict.name.clone());
 
+        // Insert a new entry into result.
+        let ict_index = icts.len() as u64;
+        icts.push(export::Ict::new(verifier.identify_ict(&mut dbg, &regs)));
+        let ict = icts.iter_mut().last().unwrap();
+        let is_tested = !tested_icts.insert(ict.name.clone());
+
+        if opt.oneshot {
+            const NOP: &[u8] = &[0x90];
+            dbg.process
+                .trace_write_memory_force(regs.rip - 1, NOP)
+                .unwrap();
+        }
         // Skip maybe.
-        if ict_index >= range.end {
-            info!("skip (after) ict #{}: {}", ict_index, ict.name);
+        if ict_index >= opt.end {
+            ict.skipped = "above".to_string();
+            info!("exit after ict #{}: {}", ict_index, ict.name);
             break;
         }
-        if is_tested {
-            info!("skip (dup) ict #{}: {}", ict_index, ict.name);
+        if ignore.contains(&ict_index) {
+            ict.skipped = "ignore".to_string();
+            info!("skip ({}) ict #{}: {}", ict.skipped, ict_index, ict.name);
             continue;
         }
-        if ict_index < range.start {
-            info!("skip (below) ict #{}: {}", ict_index, ict.name);
+        if is_tested {
+            ict.skipped = "dup".to_string();
+            info!("skip ({}) ict #{}: {}", ict.skipped, ict_index, ict.name);
+            continue;
+        }
+        if ict_index < opt.start {
+            ict.skipped = "below".to_string();
+            info!("skip ({}) ict #{}: {}", ict.skipped, ict_index, ict.name);
             continue;
         }
 
-        // Prepare for fuzz.
-        ict.skipped = false;
-        ict.segments = tester
-            .vmmap()
+        // Prepare for verification.
+        ict.segments = dbg
+            .process
+            .to_procfs()
+            .unwrap()
+            .maps()
+            .unwrap()
             .drain(..)
-            .map(|segment| Segment {
+            .map(|segment| export::Segment {
                 start: segment.address.0,
                 end: segment.address.1,
                 perm: segment.perms,
                 desc: format!("{:?}", segment.pathname),
             })
             .collect();
-        let total_targets: u64 = ranges.iter().map(|range| range.end - range.start).sum();
-        let total = total_targets.file_size(BINARY).unwrap();
-        info!("test ict #{}: {}, total = {}", ict_index, ict.name, total);
 
-        let mut total_runs = 0u32;
-        let mut last_runs = 0u32;
-        let mut started = Instant::now();
-        for range in ranges {
-            for target in range {
-                let jump_allowed = tester.run_test(target);
+        // Run verification.
+        info!("ict #{}: {}, verifying", ict_index, ict.name);
+        ict.targets = verifier.verify_ict(&mut dbg, &regs).into_ranges();
 
-                if jump_allowed {
-                    trace!("allowed target {:#x}", &target);
-                    ict.targets.insert(format!("{:#x}", &target));
-                } else {
-                    trace!("denied target {:#x}", target);
-                }
+        // Cleanup.
+        dbg.set_regs(&regs);
+    }
+}
 
-                total_runs += 1;
-                last_runs += 1;
-                if total_runs % 4096 == 0 {
-                    let duration = started.elapsed().as_secs_f64();
-                    if duration > 2.0 {
-                        let exec_per_sec = last_runs as f64 / duration;
-                        debug!(
-                            "progress: {:.2}% ({} / {}), {}/s",
-                            (total_runs as f64 / total_targets as f64 * 100.0),
-                            total_runs,
-                            total_targets,
-                            (exec_per_sec as u64).file_size(BINARY).unwrap(),
-                        );
-                        started = Instant::now();
-                        last_runs = 0;
-                    }
-                }
-            }
-        }
+fn main() {
+    let env = env_logger::Env::default().default_filter_or("info,cfifuzz::verifier=trace");
+    env_logger::from_env(env).init();
 
-        info!(
-            "allow rate of ict #{}: {:.2}% ({} / {})",
-            ict_index,
-            (ict.targets.len() as f64 / total_targets as f64) * 100.0,
-            ict.targets.len(),
-            total_targets,
+    let opt = Opt::from_args();
+    let mut icts = export::IctCollection::new(&std::path::PathBuf::from(opt.export.clone()));
+    if opt.oneshot {
+        warn!(
+            "oneshot mode enabled: contextual information may be lost; ict counting is different from non-oneshot mode"
         );
     }
 
-    icts
-}
-
-const MODES: &[(&str, fn(debugger::Debugger) -> Box<dyn CfiTester>)] = &[
-    ("lockdown", LockdownTester::new),
-    ("llvm", LlvmTester::new),
-    ("tsx-rtm", TsxTester::new_rtm),
-    ("tsx-hle", TsxTester::new_hle),
-    ("cfi-lb", CfiLbTester::new_cfilb),
-    ("os-cfi", CfiLbTester::new_oscfi),
-    ("mcfi", MCfiTester::new),
-];
-
-fn main() {
-    env_logger::builder().init();
-    let opt = Opt::from_args();
-    let end = opt.end.unwrap_or(u64::max_value());
-
     info!("running {:?}", opt.args);
-    let debugger = Debugger::new(&opt.args[..]);
-    let tester = MODES
-        .iter()
-        .find(|(name, _func)| name == &opt.mode.as_str())
-        .map(|(_name, func)| func(debugger));
-    let mut tester = match tester {
-        Some(tester) => tester,
-        None => {
-            let supported: Vec<_> = MODES.iter().map(|(name, _func)| name).collect();
-            eprintln!("list of supported CFI system: {:?}", supported);
-            panic!("unsupported CFI system ({:?})", opt.mode);
-        }
+    let mut dbg = Debugger::new(&opt.args[..]);
+    let verifier: Box<dyn CfiVerifier> = match opt.mode.as_str() {
+        "cfi-lb" => Box::new(verifier::CfiLbVerifier::new(&mut dbg)),
+        "mcfi" => Box::new(verifier::MCfiVerifier::new(&mut dbg)),
+        "llvm" => Box::new(verifier::LlvmVerifier::new(&mut dbg)),
+        _ => panic!("unsupported CFI system ({:?})", opt.mode),
     };
-    let icts = cfifuzz(&mut *tester, opt.start..end);
 
-    log::info!(
-        "exporting ICTs, {} actually fuzzed",
-        icts.iter().filter(|ict| !ict.skipped).count()
-    );
-    let file = File::create(&opt.export).expect("cannot open file");
-    serde_json::to_writer_pretty(file, &icts).expect("cannot write to file");
-
-    log::info!("bye");
+    run(dbg, verifier, &mut icts, &opt);
+    drop(icts);
+    info!("bye");
 }
