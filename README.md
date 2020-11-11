@@ -45,3 +45,19 @@ When using CScan for a publication, please cite our work:
   bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
+
+# How to use?
+Users can use the `help` option to view specific usage.
+
+## Example
+```
+RUST_LOG=info,cfifuzz::tester=trace  ./cfifuzz --export=xxx.json --mode=$model -- ./binary/$model/$command
+```
+
+# Note
+
+CScan have two versions respectively in `new-release` and `legacy-release` branches. 
+The legacy version of CScan can test all CFI schemes evaluated in the publication, while the new version only updates some of the CFI schemes.
+The difference between the new version and the old version is that the new version is easier to expand and has better performance, but does not affect the CFI test results.
+We recommend users use the new version for expansions.
+If users want to test the CFI mechanisms mentioned in the paper, the legacy version can be used.
